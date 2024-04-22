@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<style>
+		#box {
+			position: fixed;
+			height: 120px;
+			width: 80px;
+		}
+	</style>
+	<script>
+		function move() {
+			var box = document.getElementById("box");
+			var X = 0, Y = 0, dirX = 1, dirY = 1;
+			var speedX = (window.innerWidth - 80) / 100, speedY = (window.innerHeight - 120) / 100;
+			var cnt = 0;
+			function moveX() {
+				X += dirX * speedX;
+				if (X <= 0 || X >= window.innerWidth - 80) {
+					dirX = -dirX;
+					cnt = (cnt + 1) % 8;
+					document.getElementById("box").src = "img/" + cnt + ".jpg";
+				}
+				box.style.left = X + 'px';
+			}
+			function moveY() {
+				Y += dirY * speedY;
+				if (Y <= 0 || Y >= window.innerHeight - 120) {
+					dirY = -dirY;
+				}
+				box.style.top = Y + 'px';
+			}
+			setInterval(function () {
+				moveX();
+				moveY();
+			}, 25);
+		}
+	</script>
+</head>
+
+<body onload="move()">
+	<img id="box" src="img/0.jpg" alt="">
+</body>
+
+</html>

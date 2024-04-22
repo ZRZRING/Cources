@@ -1,0 +1,7 @@
+NO. 1:end in a draw
+NO. 2:end in a draw
+NO.3:A win
+
+The final result is A win:1s 
+B win:0s 
+end in a draw 2s

@@ -1,2 +1,10 @@
 {
+	"java.project.sourcePaths": [
+		"JAVA/实验5",
+		"JAVA/实验4",
+		"JAVA/实验3",
+		"JAVA/实验2",
+		"JAVA/实验1",
+		"操作系统/实验3"
+	]
 }
